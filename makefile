@@ -14,16 +14,16 @@
 
 # Options same for both client and server
 CC = gcc
-CCOPTS = -g -DMEMWATCH -DMW_STDIO -std=c99
+CCOPTS = -g -DMW_STDIO -std=c99
 LIBS = -lm
 
 # Client
-CCMAIN1 = client.c memwatch.c
-OBJS1 = client.o decrypt.o memwatch.o child.o common.o
+CCMAIN1 = client.c
+OBJS1 = client.o decrypt.o child.o common.o
 CCEXEC1 = lyrebird.client
 # Server
 CCMAIN2 = parent.c memwatch.c
-OBJS2 = memwatch.o common.o server.o
+OBJS2 = common.o server.o
 CCEXEC2 = lyrebird.server
 
 all:	$(CCEXEC1) $(CCEXEC2)
