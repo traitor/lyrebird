@@ -22,7 +22,7 @@ CCMAIN1 = client.c
 OBJS1 = client.o decrypt.o child.o common.o
 CCEXEC1 = lyrebird.client
 # Server
-CCMAIN2 = parent.c memwatch.c
+CCMAIN2 = parent.c
 OBJS2 = common.o server.o
 CCEXEC2 = lyrebird.server
 
